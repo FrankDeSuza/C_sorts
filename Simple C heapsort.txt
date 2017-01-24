@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+#define swap_int(x,y) {x ^= y; y ^= x; x^= y;}
+
+void heapSort(int *array, int numElems)
+{
+   int curr, root, i;
+
+   for (i = 1; i < numElems; i++)
+   {
+      curr = i;
+
+      while (c)
+      {
+         root = (c - 1)/2;
+
+         if (array[root] < array[curr])
+         {
+            swap_int(array[root], array[curr])
+         }
+
+         c = root;
+      }
+   }
+
+   for i = (numElems - 1); i >= 0; i--)
+   {
+      swap_int(array[0], array[i])
+
+      root = 0;
+
+      do {
+
+         curr = (2 * root) + 1;
+
+         if ((curr < (i - 1)) && (array[curr] < array[curr + 1]))
+         {
+            ++curr;
+         }
+
+         if ((curr < i) && (array[root] < array[curr))
+         {
+            swap_int(array[root], array[curr])
+         }
+
+         root = curr;
+
+      } while (curr < i);
+   }
+}
