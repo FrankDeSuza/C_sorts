@@ -12,12 +12,12 @@ int pivot(int *arr, int S, int E)
    { 
       if (arr[i] <= pivot)
       {
-         swap_int((arr + i), (arr + pIndex))
+         swap_int(arr[i], arr[pIndex])
          ++pIndex;
       }
    }
 
-   swap_int((arr + pIndex), (arr + E))
+   swap_int(arr[pIndex], arr[E])
 
    return(pIndex);
 }
